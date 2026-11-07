@@ -18,11 +18,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Homebrew
-        uses: Homebrew/actions/setup-homebrew@master
-
       - name: Install and test formulas
         run: |
+          if [ ! -x "$(command -v brew)" ] && [ -x /home/linuxbrew/.linuxbrew/bin/brew ]; then
+            eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+          fi
           brew tap omnibuf/tap "$GITHUB_WORKSPACE"
           brew install --verbose omnibuf/tap/omnibuf
           brew test omnibuf/tap/omnibuf
