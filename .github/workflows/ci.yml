@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    name: Verify Formulas (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Install and test formulas
+        run: |
+          brew tap omnibuf/tap "$GITHUB_WORKSPACE"
+          brew install --verbose omnibuf/tap/omnibuf
+          brew test omnibuf/tap/omnibuf
+          brew install --verbose omnibuf/tap/protoc-gen-omnibuf
+          brew test omnibuf/tap/protoc-gen-omnibuf
