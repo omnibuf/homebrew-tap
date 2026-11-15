@@ -5,7 +5,7 @@ class Omnibuf < Formula
   desc "Fast, jq-style CLI and conformance runner for OmniBuf binary packets"
   homepage "https://omnibuf.com"
   version "0.1.1"
-  license "MIT"
+  license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?

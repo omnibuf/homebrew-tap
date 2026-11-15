@@ -5,7 +5,7 @@ class ProtocGenOmnibuf < Formula
   desc "Protocol Buffers compiler plugin for the OmniBuf Go implementation"
   homepage "https://omnibuf.com/go"
   version "0.1.1"
-  license "MIT"
+  license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
