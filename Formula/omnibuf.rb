@@ -9,8 +9,8 @@ class Omnibuf < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/omnibuf/omnibuf-cli/releases/download/v0.1.1/omnibuf-darwin-arm64.tar.gz"
-      sha256 "e54a43457fead52a98480c8c6f1daea21e23547ac8604c2910537d971504c593"
+      url "https://github.com/omnibuf/omnibuf-cli/archive/refs/tags/v0.1.2.tar.gz"
+      sha256 "b6332317dc50772e47f0e05c38d451ae5c38049f07e583dc9d6974dc0d2079d7"
     else
       url "https://github.com/omnibuf/omnibuf-cli/releases/download/v0.1.1/omnibuf-darwin-amd64.tar.gz"
       sha256 "7e32279a21ed4f9ef2a84b69aee769b640baf3cbcf31275d31e95cc83392aaca"
