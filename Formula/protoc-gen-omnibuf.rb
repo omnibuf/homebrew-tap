@@ -9,8 +9,8 @@ class ProtocGenOmnibuf < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/omnibuf/omnibuf-go/releases/download/v0.1.1/protoc-gen-omnibuf-darwin-arm64.tar.gz"
-      sha256 "9d5c264015d21ff1ee76dce5d5e06ce1fefe429d8878d3bdb946e1519b775ed4"
+      url "https://github.com/omnibuf/omnibuf-go/archive/refs/tags/v0.2.2.tar.gz"
+      sha256 "ce6d05b1b8e0e1add9bd68a816ca6888862a3d359ade1dbe3b340b11f992de9c"
     else
       url "https://github.com/omnibuf/omnibuf-go/releases/download/v0.1.1/protoc-gen-omnibuf-darwin-amd64.tar.gz"
       sha256 "51ad070892d28cc399e2f7d5df6597bc7731c2da9057e73d57f8b553bfed1311"
