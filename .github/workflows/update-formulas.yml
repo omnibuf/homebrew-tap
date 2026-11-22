@@ -1,0 +1,34 @@
+name: Update Binary Formulas
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-formulas:
+    name: Sync Formulas with Latest Releases
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update formula versions and checksums
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/update-formulas.py
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: 'chore(formula): sync binary formulas with latest releases'
+          branch: chore/update-formulas
+          title: 'chore(formula): update binary formulas to latest releases'
+          body: |
+            Automated update of multi-arch binary URLs and `sha256` checksums from the latest GitHub Releases (`checksums.txt`).
+          reviewers: sudorandom
+          delete-branch: true
