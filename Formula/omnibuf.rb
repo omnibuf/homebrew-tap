@@ -4,26 +4,26 @@
 class Omnibuf < Formula
   desc "Fast, jq-style CLI and conformance runner for OmniBuf binary packets"
   homepage "https://omnibuf.com"
-  version "0.1.2"
+  version "0.1.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/omnibuf/omnibuf-cli/releases/download/v0.1.2/omnibuf-darwin-arm64.tar.gz"
-      sha256 "af4e76b2c0982e7990d82444f96ad4dfdb10daa7b4808aa7f646b3df198dae55"
+      url "https://github.com/omnibuf/omnibuf-cli/releases/download/v0.1.3/omnibuf-darwin-arm64.tar.gz"
+      sha256 "83a83b44c1b402852fd5498a9dc9d8093c7efbaea35e0b94e4539abe04f0c743"
     else
-      url "https://github.com/omnibuf/omnibuf-cli/releases/download/v0.1.2/omnibuf-darwin-amd64.tar.gz"
-      sha256 "1dcd09f7bb3617541d35db8ce9edb1b7951473ece29c8567d17567bf29ef022c"
+      url "https://github.com/omnibuf/omnibuf-cli/releases/download/v0.1.3/omnibuf-darwin-amd64.tar.gz"
+      sha256 "226ab48e9377fd61e23bbe78edfa3148a1babc87cc3bfbceffd5f110d2decf1c"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/omnibuf/omnibuf-cli/releases/download/v0.1.2/omnibuf-linux-arm64.tar.gz"
-      sha256 "c08ad9409eea8d8ab65e26672dfacca27cae1903700519f8cd8e605f5571539d"
+      url "https://github.com/omnibuf/omnibuf-cli/releases/download/v0.1.3/omnibuf-linux-arm64.tar.gz"
+      sha256 "843ffc3dcbb31dcf3680f05ec1a8458d2952d6a5ff0b9aff4f9e079fccbaae96"
     else
-      url "https://github.com/omnibuf/omnibuf-cli/releases/download/v0.1.2/omnibuf-linux-amd64.tar.gz"
-      sha256 "700a9808997a22066e804e69230a85d227b3b9373d023bf341accacc3f4f9039"
+      url "https://github.com/omnibuf/omnibuf-cli/releases/download/v0.1.3/omnibuf-linux-amd64.tar.gz"
+      sha256 "c5d21cea8dad1e24c4553720e3e3730d3ffdc43917269e6a3a3c736bf3768cf5"
     end
   end
 
