@@ -13,6 +13,7 @@ from pathlib import Path
 FORMULAS = [
     ("Formula/omnibuf.rb", "omnibuf/omnibuf-cli"),
     ("Formula/protoc-gen-omnibuf.rb", "omnibuf/omnibuf-go"),
+    ("Formula/protoc-gen-omnibuf-nano.rb", "omnibuf/omnibuf-nano"),
 ]
 
 
