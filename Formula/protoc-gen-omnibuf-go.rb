@@ -1,7 +1,7 @@
 # typed: false
 # frozen_string_literal: true
 
-class ProtocGenOmnibuf < Formula
+class ProtocGenOmnibufGo < Formula
   desc "Protocol Buffers compiler plugin for the OmniBuf Go implementation"
   homepage "https://omnibuf.com/go"
   version "0.2.7"
@@ -28,11 +28,12 @@ class ProtocGenOmnibuf < Formula
   end
 
   def install
-    bin.install "protoc-gen-omnibuf"
+    binary = File.exist?("protoc-gen-omnibuf-go") ? "protoc-gen-omnibuf-go" : "protoc-gen-omnibuf"
+    bin.install binary => "protoc-gen-omnibuf-go"
   end
 
   test do
-    assert_predicate bin/"protoc-gen-omnibuf", :exist?
-    assert_predicate bin/"protoc-gen-omnibuf", :executable?
+    assert_predicate bin/"protoc-gen-omnibuf-go", :exist?
+    assert_predicate bin/"protoc-gen-omnibuf-go", :executable?
   end
 end

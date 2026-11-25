@@ -26,5 +26,7 @@ jobs:
           brew tap omnibuf/tap "$GITHUB_WORKSPACE"
           brew install --verbose omnibuf/tap/omnibuf
           brew test omnibuf/tap/omnibuf
-          brew install --verbose omnibuf/tap/protoc-gen-omnibuf
-          brew test omnibuf/tap/protoc-gen-omnibuf
+          brew install --verbose omnibuf/tap/protoc-gen-omnibuf-go
+          brew test omnibuf/tap/protoc-gen-omnibuf-go
+          brew install --verbose omnibuf/tap/protoc-gen-omnibuf-nano
+          brew test omnibuf/tap/protoc-gen-omnibuf-nano

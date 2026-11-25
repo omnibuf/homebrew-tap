@@ -9,7 +9,7 @@ Homebrew tap (`omnibuf/tap`) distributing the [OmniBuf](https://omnibuf.com) CLI
 brew install omnibuf/tap/omnibuf
 
 # Go protoc / buf code generator plugin
-brew install omnibuf/tap/protoc-gen-omnibuf
+brew install omnibuf/tap/protoc-gen-omnibuf-go
 
 # C99 embedded Nano protoc code generator plugin
 brew install omnibuf/tap/protoc-gen-omnibuf-nano
@@ -19,7 +19,7 @@ brew install omnibuf/tap/protoc-gen-omnibuf-nano
 
 ```bash
 brew update
-brew upgrade omnibuf protoc-gen-omnibuf protoc-gen-omnibuf-nano
+brew upgrade omnibuf protoc-gen-omnibuf-go protoc-gen-omnibuf-nano
 ```
 
 ## Formulas
@@ -27,7 +27,7 @@ brew upgrade omnibuf protoc-gen-omnibuf protoc-gen-omnibuf-nano
 | Formula | Binary | Source |
 | :--- | :--- | :--- |
 | `omnibuf` | `omnibuf` | [`omnibuf/omnibuf-cli`](https://github.com/omnibuf/omnibuf-cli) |
-| `protoc-gen-omnibuf` | `protoc-gen-omnibuf` | [`omnibuf/omnibuf-go`](https://github.com/omnibuf/omnibuf-go) |
+| `protoc-gen-omnibuf-go` | `protoc-gen-omnibuf-go` | [`omnibuf/omnibuf-go`](https://github.com/omnibuf/omnibuf-go) |
 | `protoc-gen-omnibuf-nano` | `protoc-gen-omnibuf-nano` | [`omnibuf/omnibuf-nano`](https://github.com/omnibuf/omnibuf-nano) |
 
 ## License

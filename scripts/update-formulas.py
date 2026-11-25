@@ -12,7 +12,7 @@ from pathlib import Path
 
 FORMULAS = [
     ("Formula/omnibuf.rb", "omnibuf/omnibuf-cli"),
-    ("Formula/protoc-gen-omnibuf.rb", "omnibuf/omnibuf-go"),
+    ("Formula/protoc-gen-omnibuf-go.rb", "omnibuf/omnibuf-go"),
     ("Formula/protoc-gen-omnibuf-nano.rb", "omnibuf/omnibuf-nano"),
 ]
 
@@ -69,11 +69,18 @@ def update_formula(formula_path: Path, repo: str) -> bool:
     def replace_pair(m: re.Match[str]) -> str:
         nonlocal matched
         prefix, asset_name, mid = m.group(1), m.group(2), m.group(3)
-        digest = checksums.get(asset_name)
+        resolved_asset = asset_name
+        digest = checksums.get(resolved_asset)
+        if not digest and asset_name.startswith("protoc-gen-omnibuf-"):
+            # Handle rename transition from protoc-gen-omnibuf-<os> to protoc-gen-omnibuf-go-<os>
+            alt = asset_name.replace("protoc-gen-omnibuf-", "protoc-gen-omnibuf-go-", 1)
+            if alt in checksums:
+                resolved_asset = alt
+                digest = checksums[alt]
         if not digest:
             raise RuntimeError(f"{repo} {tag}: checksum for {asset_name} not found in checksums.txt")
         matched += 1
-        return f'{prefix}{tag}/{asset_name}{mid}"{digest}"'
+        return f'{prefix}{tag}/{resolved_asset}{mid}"{digest}"'
 
     updated = pair_re.sub(replace_pair, updated)
     if matched == 0:
