@@ -4,26 +4,26 @@
 class ProtocGenOmnibufGo < Formula
   desc "Protocol Buffers compiler plugin for the OmniBuf Go implementation"
   homepage "https://omnibuf.com/go"
-  version "0.2.7"
+  version "0.2.11"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/omnibuf/omnibuf-go/releases/download/v0.2.7/protoc-gen-omnibuf-darwin-arm64.tar.gz"
-      sha256 "4684b833bbcb3ca8f06e05b9b4b3b6a752b999ee0e1c1cbdfa12a14d8c37a2d6"
+      url "https://github.com/omnibuf/omnibuf-go/releases/download/v0.2.11/protoc-gen-omnibuf-go-darwin-arm64.tar.gz"
+      sha256 "11d73c7915b7df94c93c1d57b016967e031a476adac355525c763fc003fc2358"
     else
-      url "https://github.com/omnibuf/omnibuf-go/releases/download/v0.2.7/protoc-gen-omnibuf-darwin-amd64.tar.gz"
-      sha256 "d9b5f5abc0de400fdab50ada25982517e523c485024415c4280de34c04470e30"
+      url "https://github.com/omnibuf/omnibuf-go/releases/download/v0.2.11/protoc-gen-omnibuf-go-darwin-amd64.tar.gz"
+      sha256 "dcc25d2c2f62049c476493fef2c7076409e0b6bb7bbd87fadd88def556bef8f4"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/omnibuf/omnibuf-go/releases/download/v0.2.7/protoc-gen-omnibuf-linux-arm64.tar.gz"
-      sha256 "082a5c4fb798b340f0e3f8e3ee18c15ce4ff402ebf1b49038bc3097f0878234f"
+      url "https://github.com/omnibuf/omnibuf-go/releases/download/v0.2.11/protoc-gen-omnibuf-go-linux-arm64.tar.gz"
+      sha256 "fd2430dcc50c265001b2139c579e59b10210efbf008e9810457873c58c2cd333"
     else
-      url "https://github.com/omnibuf/omnibuf-go/releases/download/v0.2.7/protoc-gen-omnibuf-linux-amd64.tar.gz"
-      sha256 "48abac22bb2dffcd0aa96b2297ccb43b01741988a18c19711312f000658904b8"
+      url "https://github.com/omnibuf/omnibuf-go/releases/download/v0.2.11/protoc-gen-omnibuf-go-linux-amd64.tar.gz"
+      sha256 "540c491d7c4d675a935681881ff2144d2b43f3a77a483b5150f3ac92a17c5e04"
     end
   end
 
