@@ -1,4 +1,4 @@
-name: Update Binary Formulas
+name: Update Formulas
 
 on:
   schedule:
