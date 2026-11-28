@@ -4,26 +4,26 @@
 class ProtocGenOmnibufGo < Formula
   desc "Protocol Buffers compiler plugin for the OmniBuf Go implementation"
   homepage "https://omnibuf.com/go"
-  version "0.2.13"
+  version "0.2.14"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/omnibuf/omnibuf-go/releases/download/v0.2.13/protoc-gen-omnibuf-go-darwin-arm64.tar.gz"
-      sha256 "bff4d2ac78a3f32915e2ec847cfef4060eeb5e4eee88b9d4f5bc5bbe8d4d8007"
+      url "https://github.com/omnibuf/omnibuf-go/releases/download/v0.2.14/protoc-gen-omnibuf-go-darwin-arm64.tar.gz"
+      sha256 "dd98930c8bf3a96b158a31a75d25c0386cf8cac9adf8644dc4fd7077abb9f99d"
     else
-      url "https://github.com/omnibuf/omnibuf-go/releases/download/v0.2.13/protoc-gen-omnibuf-go-darwin-amd64.tar.gz"
-      sha256 "411dfa0b6c923a89f8dc5ea3d1be5bd4ecdb8389173c43f055ee7f0a17391308"
+      url "https://github.com/omnibuf/omnibuf-go/releases/download/v0.2.14/protoc-gen-omnibuf-go-darwin-amd64.tar.gz"
+      sha256 "e19d203e783d037b8620cdbcb7d632e11a586aa754a3cb1c0f585ae804cb7504"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/omnibuf/omnibuf-go/releases/download/v0.2.13/protoc-gen-omnibuf-go-linux-arm64.tar.gz"
-      sha256 "93bcc9b66ed03dcf3cec150880b6d6063578147fbefd4ef67a30a80e8a1fedb5"
+      url "https://github.com/omnibuf/omnibuf-go/releases/download/v0.2.14/protoc-gen-omnibuf-go-linux-arm64.tar.gz"
+      sha256 "d56c4c75c4fe0910f026fa11d6b81b1547acad0deea2bc52faa9ca69a6d35fe5"
     else
-      url "https://github.com/omnibuf/omnibuf-go/releases/download/v0.2.13/protoc-gen-omnibuf-go-linux-amd64.tar.gz"
-      sha256 "ef5ac34a3d0f14c0dc0424e3551480dce518e78ec980f0cf656053e2871346b0"
+      url "https://github.com/omnibuf/omnibuf-go/releases/download/v0.2.14/protoc-gen-omnibuf-go-linux-amd64.tar.gz"
+      sha256 "793aa165a168a5c6a6809eac257bfe54014809b5398171744efb35a6e1caca1c"
     end
   end
 
